@@ -17,8 +17,8 @@ router.use(logger);
 // GET /api/notes - List all notes
 router.get('/', listNotes);
 router.get('/:id', getNote);
-// router.post('/', validateNote, addNote);
-// router.put('/:id', validateNote, modifyNote);
+router.post('/', addNote);
+router.put('/:id', modifyNote);
 router.delete('/:id', removeNote);
 
 // GET /api/notes/categories/:categoryId - Get notes by category ID
