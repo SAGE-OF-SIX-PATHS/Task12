@@ -27,6 +27,11 @@ mongoose.connect(MONGODB_URI)
 // Routes
 app.use('/api/notes', noteRoutes);
 
+// Root endpoint
+app.get('/', (req, res) => {
+          res.send('Note-Keeping API is running!');
+});
+
 // Error handling middleware
 app.use(errorHandler);
 
