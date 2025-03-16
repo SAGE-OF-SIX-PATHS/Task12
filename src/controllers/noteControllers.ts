@@ -17,7 +17,7 @@ export const listNotes = async (req: Request, res: Response) => {
                     errorResponse(res, 'Error fetching notes');
           }
 };
-
+ 
 export const getNote = async (req: Request, res: Response) => {
           try {
                     const note = await getNoteById(req.params.id);
