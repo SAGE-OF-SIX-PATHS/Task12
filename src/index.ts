@@ -1,4 +1,3 @@
-// src/index.ts
 import express from 'express';
 import mongoose from 'mongoose';
 import noteRoutes from './routes/noteRoutes';
@@ -28,9 +27,11 @@ mongoose.connect(MONGODB_URI)
 app.use('/api/notes', noteRoutes);
 
 // Root endpoint
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
           res.send('Note-Keeping API is running!');
+          
 });
+      
 
 // Error handling middleware
 app.use(errorHandler);
